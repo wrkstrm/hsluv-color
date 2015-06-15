@@ -1,0 +1,14 @@
+language: objective-c
+osx_image: xcode9.2
+env:
+  global:
+    - IOS_SDK=iphonesimulator11.2
+    - OSX_SDK=macosx10.13
+  matrix:
+    - SCHEME=HSLuvMac TEST_SDK=$OSX_SDK DESTINATION="arch=x86_64"
+    - SCHEME=HSLuviOS TEST_SDK=$IOS_SDK DESTINATION="OS=11.2,platform=iOS Simulator,id=9C4C0DDA-839D-4851-AA09-4382DB814A63"
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -scheme "$SCHEME" -sdk "$TEST_SDK" -destination "$DESTINATION" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test | xcpretty -c
