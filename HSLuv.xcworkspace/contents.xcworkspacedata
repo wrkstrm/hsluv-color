@@ -5,6 +5,6 @@
       location = "group:HSLuviOS.playground">
    </FileRef>
    <FileRef
-      location = "group:HSLuvSwift.xcodeproj">
+      location = "group:HSLuv.xcodeproj">
    </FileRef>
 </Workspace>

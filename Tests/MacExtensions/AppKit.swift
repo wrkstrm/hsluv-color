@@ -24,7 +24,7 @@
 
 import Foundation
 import XCTest
-import HSLuvSwift
+import HSLuv
 
 extension NSColor {
     /// Convenience function to wrap the behavior of getRed(red:green:blue:alpha:)

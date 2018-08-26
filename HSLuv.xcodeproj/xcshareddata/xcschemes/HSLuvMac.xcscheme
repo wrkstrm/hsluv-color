@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB37B9041B2E7994009E63A5"
-               BuildableName = "HSLuvSwift.framework"
-               BlueprintName = "HSLuviOS"
-               ReferencedContainer = "container:HSLuvSwift.xcodeproj">
+               BlueprintIdentifier = "CBDA801B1B2D2C740010C653"
+               BuildableName = "HSLuv.framework"
+               BlueprintName = "HSLuvMac"
+               ReferencedContainer = "container:HSLuv.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB6AB2A01B308A6F0075AF04"
-               BuildableName = "HSLuviOSTests.xctest"
-               BlueprintName = "HSLuviOSTests"
-               ReferencedContainer = "container:HSLuvSwift.xcodeproj">
+               BlueprintIdentifier = "CB98BFB31B307B070027506A"
+               BuildableName = "HSLuvTests.xctest"
+               BlueprintName = "HSLuvTests"
+               ReferencedContainer = "container:HSLuv.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CB6AB27E1B3083890075AF04"
+               BuildableName = "HSLuvMacTests.xctest"
+               BlueprintName = "HSLuvMacTests"
+               ReferencedContainer = "container:HSLuv.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB37B9041B2E7994009E63A5"
-            BuildableName = "HSLuvSwift.framework"
-            BlueprintName = "HSLuviOS"
-            ReferencedContainer = "container:HSLuvSwift.xcodeproj">
+            BlueprintIdentifier = "CBDA801B1B2D2C740010C653"
+            BuildableName = "HSLuv.framework"
+            BlueprintName = "HSLuvMac"
+            ReferencedContainer = "container:HSLuv.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +74,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB37B9041B2E7994009E63A5"
-            BuildableName = "HSLuvSwift.framework"
-            BlueprintName = "HSLuviOS"
-            ReferencedContainer = "container:HSLuvSwift.xcodeproj">
+            BlueprintIdentifier = "CBDA801B1B2D2C740010C653"
+            BuildableName = "HSLuv.framework"
+            BlueprintName = "HSLuvMac"
+            ReferencedContainer = "container:HSLuv.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +92,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB37B9041B2E7994009E63A5"
-            BuildableName = "HSLuvSwift.framework"
-            BlueprintName = "HSLuviOS"
-            ReferencedContainer = "container:HSLuvSwift.xcodeproj">
+            BlueprintIdentifier = "CBDA801B1B2D2C740010C653"
+            BuildableName = "HSLuv.framework"
+            BlueprintName = "HSLuvMac"
+            ReferencedContainer = "container:HSLuv.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
