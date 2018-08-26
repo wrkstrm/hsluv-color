@@ -89,9 +89,7 @@ class Snapshot {
 
                     block(hex, tag, stableTuple, currentTuple, stableChannel, currentChannel)
                 }
-
             }
         }
-
     }
 }
