@@ -1,6 +1,6 @@
 //
 //  Snapshot.swift
-//  HSLuvSwift
+//  HSLuvColor
 //
 //  Created by Clay Smith on 6/17/15.
 //  Copyright © 2015 Clay Smith. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-@testable import HSLuvSwift
+@testable import HSLuv
 
 // TODO: Add HPLuv support
 

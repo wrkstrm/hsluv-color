@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "HSLuvColor"
 
-  s.version          = "0.9.0"
+  s.version          = "0.9.1"
 
   s.summary          = "wrkstrm port of HSLuvSwift, a human-friendly alternative to HSL."
   s.homepage         = "https://github.com/wrkstrm/hsluv-color"

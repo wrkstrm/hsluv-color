@@ -1,9 +1,9 @@
-//: # HSLuvSwift
+//: # HSLuvColor
 //:
-//: Swift port of HSLuv, a human-friendly alternative to HSL
+//: wrkstrm port of HSLuvSwift, a human-friendly alternative to HSL
 
 import UIKit
-import HSLuvSwift
+import HSLuv
 
 //: ## Examples
 //:
