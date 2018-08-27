@@ -35,16 +35,16 @@ platform :ios, '8.0' # or, :osx, '10.11'
 use_frameworks!
 
 target 'YourProject' do
-    pod 'HSLuvColor', '~> 0.9.3'
+    pod 'HSLuvColor', '~> '0.9.4'
 end
 ```
 
 ### Carthage
 
-Add `github "wrkstrm/hsluv-color" ~> 0.9.3` to your Cartfile and run `carthage bootstrap`. This builds frameworks for Mac and iOS targets. 
+Add `github "wrkstrm/hsluv-color" ~> `0.9.4` to your Cartfile and run `carthage bootstrap`. This builds frameworks for Mac and iOS targets. 
 
 ```sh
-> echo 'github "wrkstrm/hsluv-wkstrm" ~> 0.9.3' >> Cartfile
+> echo 'github "wrkstrm/hsluv-wkstrm" ~> '0.9.4' >> Cartfile
 > carthage bootstrap
 ```
 
