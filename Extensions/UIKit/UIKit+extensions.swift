@@ -25,15 +25,62 @@
 import UIKit
 
 public extension UIColor {
-  /// Initializes and returns a color object using the specified opacity and
-  /// HSLuv color space component values.
-  ///
-  /// - parameter hue: Double
-  /// - parameter saturation: Double
-  /// - parameter lightness: Double
-  /// - parameter alpha: Double
-  convenience init(hue: Double, saturation: Double, lightness: Double, alpha: Double) {
-    let rgb = hsluvToRgb(HSLuvTuple(hue, saturation, lightness))
-    self.init(red: CGFloat(rgb.R), green: CGFloat(rgb.G), blue: CGFloat(rgb.B), alpha: CGFloat(alpha))
-  }
+    /// Initializes and returns a color object using the specified opacity and
+    /// HSLuv color space component values.
+    ///
+    /// - parameter hue: Double
+    /// - parameter saturation: Double
+    /// - parameter lightness: Double
+    /// - parameter alpha: Double
+    public convenience init(hue: Double, saturation: Double, lightness: Double, alpha: Double) {
+        let rgb = hsluvToRgb(HSLuv(hue, saturation, lightness))
+        self.init(red: CGFloat(rgb.R),
+                  green: CGFloat(rgb.G),
+                  blue: CGFloat(rgb.B),
+                  alpha: CGFloat(alpha))
+    }
+
+    /// Initializes and returns a color object using the specified opacity and
+    /// HSLuv color space component values.
+    ///
+    /// - parameter hue: Double
+    /// - parameter saturation: Double
+    /// - parameter lightness: Double
+    /// - parameter alpha: Double
+    public convenience init(hsluv: HSLuv, alpha: Double) {
+        let rgb = hsluvToRgb(hsluv)
+        self.init(red: CGFloat(rgb.R),
+                  green: CGFloat(rgb.G),
+                  blue: CGFloat(rgb.B),
+                  alpha: CGFloat(alpha))
+    }
+
+    /// Initializes and returns a color object using the specified opacity and
+    /// HPLuv color space component values.
+    ///
+    /// - parameter hue: Double
+    /// - parameter saturation: Double
+    /// - parameter lightness: Double
+    /// - parameter alpha: Double
+    public convenience init(hpluv: HPLuv, alpha: Double) {
+        let rgb = hpluvToRgb(hpluv)
+        self.init(red: CGFloat(rgb.R),
+                  green: CGFloat(rgb.G),
+                  blue: CGFloat(rgb.B),
+                  alpha: CGFloat(alpha))
+    }
+
+    /// Convenience function to wrap the behavior of getRed(red:green:blue:alpha:)
+    ///
+    /// - returns: (rgb: RGB, alpha: CGFloat)
+    public var getRGBA: (rgb: RGB, a: Double) {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (RGB(Double(red), Double(green), Double(blue)), a: Double(alpha))
+    }
 }

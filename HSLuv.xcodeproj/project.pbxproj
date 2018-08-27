@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E6B61002133797E00A7ADF0 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */; };
+		6E6B610121337BA600A7ADF0 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */; };
 		CB24CBB51B394AD800091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB24CBB61B394ADB00091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB328E3B1B32050C0061A872 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB339EEC1B31EE2D0067FDAF /* snapshot-rev4.json in Resources */ = {isa = PBXBuildFile; fileRef = CB339EEB1B31EE210067FDAF /* snapshot-rev4.json */; };
-		CB37B91C1B2E79A5009E63A5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80361B2D2CBF0010C653 /* Constant.swift */; };
 		CB37B91D1B2E79A8009E63A5 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80371B2D2CBF0010C653 /* Math.swift */; };
 		CB6AB2841B3083890075AF04 /* HSLuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDA801C1B2D2C740010C653 /* HSLuv.framework */; };
 		CB6AB28B1B3084020075AF04 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783AD11B3078D5001F8BCB /* AppKit.swift */; };
@@ -21,9 +22,8 @@
 		CB6AB2B31B308FA70075AF04 /* UIKit+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783ACE1B307768001F8BCB /* UIKit+extensions.swift */; };
 		CB98BFB91B307B070027506A /* HSLuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDA801C1B2D2C740010C653 /* HSLuv.framework */; };
 		CB98BFBF1B307B1D0027506A /* HSLuvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB604FB91B30734C009A99D1 /* HSLuvTests.swift */; };
-		CBCAD5341B2F88AB00D0366A /* ColorEncodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* ColorEncodings.swift */; };
-		CBCAD5351B2F88AD00D0366A /* ColorEncodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* ColorEncodings.swift */; };
-		CBDA80381B2D2CBF0010C653 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80361B2D2CBF0010C653 /* Constant.swift */; };
+		CBCAD5341B2F88AB00D0366A /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* Encodings.swift */; };
+		CBCAD5351B2F88AD00D0366A /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* Encodings.swift */; };
 		CBDA80391B2D2CBF0010C653 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80371B2D2CBF0010C653 /* Math.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E6B60FC21335D3400A7ADF0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Encodings+Conversions.swift"; path = "../../../../Github/playgrounds/Encodings+Conversions.swift"; sourceTree = "<group>"; };
 		CB328E391B3205050061A872 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snapshot.swift; path = Tests/Snapshot.swift; sourceTree = SOURCE_ROOT; };
 		CB339EEB1B31EE210067FDAF /* snapshot-rev4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "snapshot-rev4.json"; path = "Tests/Assets/snapshot-rev4.json"; sourceTree = SOURCE_ROOT; };
 		CB37B9051B2E7994009E63A5 /* HSLuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSLuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,11 +77,10 @@
 		CB783AD01B3078CF001F8BCB /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIKit.swift; path = Tests/iOSExtensions/UIKit.swift; sourceTree = SOURCE_ROOT; };
 		CB783AD11B3078D5001F8BCB /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppKit.swift; path = Tests/MacExtensions/AppKit.swift; sourceTree = SOURCE_ROOT; };
 		CB98BFB41B307B070027506A /* HSLuvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSLuvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBCAD5331B2F88AB00D0366A /* ColorEncodings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEncodings.swift; path = Source/ColorEncodings.swift; sourceTree = SOURCE_ROOT; };
+		CBCAD5331B2F88AB00D0366A /* Encodings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encodings.swift; path = Source/Encodings.swift; sourceTree = SOURCE_ROOT; };
 		CBCAD5371B2FBEBD00D0366A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CBCAD53B1B2FBF0600D0366A /* HSLuvColor.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HSLuvColor.podspec; sourceTree = "<group>"; };
+		CBCAD53B1B2FBF0600D0366A /* HSLuvColor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = HSLuvColor.podspec; sourceTree = "<group>"; };
 		CBDA801C1B2D2C740010C653 /* HSLuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSLuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBDA80361B2D2CBF0010C653 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Source/Constant.swift; sourceTree = SOURCE_ROOT; };
 		CBDA80371B2D2CBF0010C653 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = Source/Math.swift; sourceTree = SOURCE_ROOT; };
 		CBDD2B131B461C3000E4548F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,9 +225,9 @@
 		CBDA801E1B2D2C740010C653 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CBDA80361B2D2CBF0010C653 /* Constant.swift */,
-				CBCAD5331B2F88AB00D0366A /* ColorEncodings.swift */,
 				CBDA80371B2D2CBF0010C653 /* Math.swift */,
+				CBCAD5331B2F88AB00D0366A /* Encodings.swift */,
+				6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */,
 				CB8B96C41B2D59C7000F303C /* Supporting Files */,
 			);
 			name = Source;
@@ -259,6 +271,7 @@
 				CB37B9011B2E7994009E63A5 /* Frameworks */,
 				CB37B9021B2E7994009E63A5 /* Headers */,
 				CB37B9031B2E7994009E63A5 /* Resources */,
+				6E6B60FE21335D4300A7ADF0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,7 +307,6 @@
 				CB6AB29D1B308A6F0075AF04 /* Sources */,
 				CB6AB29E1B308A6F0075AF04 /* Frameworks */,
 				CB6AB29F1B308A6F0075AF04 /* Resources */,
-				6E43D94521328155003031C7 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -332,6 +344,8 @@
 				CBDA80181B2D2C740010C653 /* Frameworks */,
 				CBDA80191B2D2C740010C653 /* Headers */,
 				CBDA801A1B2D2C740010C653 /* Resources */,
+				6E6B60FC21335D3400A7ADF0 /* CopyFiles */,
+				6E6B60FD21335D3900A7ADF0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -361,7 +375,6 @@
 					};
 					CB6AB27E1B3083890075AF04 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 2627WG76ES;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
@@ -371,7 +384,6 @@
 					};
 					CB98BFB31B307B070027506A = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 2627WG76ES;
 						LastSwiftMigration = 0920;
 					};
 					CBDA801B1B2D2C740010C653 = {
@@ -442,14 +454,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E43D94521328155003031C7 /* Swiftlint */ = {
+		6E6B60FD21335D3900A7ADF0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		6E6B60FE21335D4300A7ADF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,8 +487,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB37B91C1B2E79A5009E63A5 /* Constant.swift in Sources */,
-				CBCAD5351B2F88AD00D0366A /* ColorEncodings.swift in Sources */,
+				6E6B610121337BA600A7ADF0 /* Encodings+Conversions.swift in Sources */,
+				CBCAD5351B2F88AD00D0366A /* Encodings.swift in Sources */,
 				CB37B91D1B2E79A8009E63A5 /* Math.swift in Sources */,
 				CB6AB2B31B308FA70075AF04 /* UIKit+extensions.swift in Sources */,
 			);
@@ -501,8 +525,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDA80381B2D2CBF0010C653 /* Constant.swift in Sources */,
-				CBCAD5341B2F88AB00D0366A /* ColorEncodings.swift in Sources */,
+				6E6B61002133797E00A7ADF0 /* Encodings+Conversions.swift in Sources */,
+				CBCAD5341B2F88AB00D0366A /* Encodings.swift in Sources */,
 				CBDA80391B2D2CBF0010C653 /* Math.swift in Sources */,
 				CB6AB2B01B308EDC0075AF04 /* NSColor+extensions.swift in Sources */,
 			);
@@ -599,7 +623,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2627WG76ES;
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,7 +645,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2627WG76ES;
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,7 +665,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,7 +687,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -687,7 +711,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2627WG76ES;
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,7 +731,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2627WG76ES;
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

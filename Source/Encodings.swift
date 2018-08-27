@@ -1,7 +1,7 @@
 //
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Clay Smith
+// Copyright © 2015 Clay Smith
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,67 +22,58 @@
 // SOFTWARE.
 //
 
-// Using structs instead of tuples prevents implicit conversion,
-// which was making debugging difficult
-
 import Foundation
 
-typealias Tuple = (Double, Double, Double)
-
-protocol TupleConverter {
-    var tuple: Tuple { get }
-}
-
 /// Hexadecimal color
-struct Hex {
-    let string: String
+public struct Hex {
+    public let string: String
 
-    init(_ string: String) {
+    public init(_ string: String) {
         self.string = string
     }
 }
 
 /// Red, Green, Blue (RGB)
-struct RGBTuple: TupleConverter {
-    var R: Double
-    var G: Double
-    var B: Double
+public struct RGB: TupleConvertible {
+    public var R: Double
+    public var G: Double
+    public var B: Double
 
-    init(_ R: Double, _ G: Double, _ B: Double) {
+    public init(_ R: Double, _ G: Double, _ B: Double) {
         self.R = R
         self.G = G
         self.B = B
     }
 
-    var tuple: Tuple {
+    public var tuple: ColorTuple {
         return (R, G, B)
     }
 }
 
 /// Luminance, Blue-stimulation, Cone-response [CIE 1931] (XYZ)
-struct XYZTuple: TupleConverter {
-    var X: Double
-    var Y: Double
-    var Z: Double
+public struct XYZ: TupleConvertible {
+    public var X: Double
+    public var Y: Double
+    public var Z: Double
 
-    init(_ X: Double, _ Y: Double, _ Z: Double) {
+    public init(_ X: Double, _ Y: Double, _ Z: Double) {
         self.X = X
         self.Y = Y
         self.Z = Z
     }
 
-    var tuple: Tuple {
+    public var tuple: ColorTuple {
         return (X, Y, Z)
     }
 }
 
 /// L*, u*, v* [CIE 1976] (LUV)
-struct LUVTuple {
-    var L: Double
-    var U: Double
-    var V: Double
+public struct LUV {
+    public var L: Double
+    public var U: Double
+    public var V: Double
 
-    init(_ L: Double, _ U: Double, _ V: Double) {
+    public init(_ L: Double, _ U: Double, _ V: Double) {
         self.L = L
         self.U = U
         self.V = V
@@ -90,25 +81,38 @@ struct LUVTuple {
 }
 
 /// Lightness, Chroma, Hue (LCH)
-struct LCHTuple {
-    var L: Double
-    var C: Double
-    var H: Double
+public struct LCH {
+    public var L: Double
+    public var C: Double
+    public var H: Double
 
-    init(_ L: Double, _ C: Double, _ H: Double) {
+    public init(_ L: Double, _ C: Double, _ H: Double) {
         self.L = L
         self.C = C
         self.H = H
     }
 }
 
-/// Hue(man), Saturation, Lightness (HSLuv)
-struct HSLuvTuple {
-    var H: Double
-    var S: Double
-    var L: Double
+/// HSLuv: Hue(man), Saturation, Lightness (HSLuv)
+public struct HSLuv {
+    public var H: Double
+    public var S: Double
+    public var L: Double
 
-    init(_ H: Double, _ S: Double, _ L: Double) {
+    public init(_ H: Double, _ S: Double, _ L: Double) {
+        self.H = H
+        self.S = S
+        self.L = L
+    }
+}
+
+/// HPLuv: Hue(pastel), Saturation, Lightness (HPLuv)
+public struct HPLuv {
+    public var H: Double
+    public var S: Double
+    public var L: Double
+
+    public  init(_ H: Double, _ S: Double, _ L: Double) {
         self.H = H
         self.S = S
         self.L = L

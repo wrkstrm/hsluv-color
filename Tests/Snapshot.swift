@@ -47,11 +47,11 @@ class Snapshot {
         for sample in Snapshot.hexSamples {
             let hex = Hex(sample)
 
-            let rgb = hexToRgb(hex)
-            let xyz = rgbToXyz(rgb)
-            let luv = xyzToLuv(xyz)
-            let lch = luvToLch(luv)
-            let hsluv = lchToHsluv(lch)
+            let rgb = hex.toRgb
+            let xyz = rgb.toXyz
+            let luv = xyz.toLuv
+            let lch = luv.toLch
+            let hsluv = lch.toHSLuv
 
             current[sample] = [
                 "rgb": [rgb.R, rgb.G, rgb.B],
