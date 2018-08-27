@@ -37,9 +37,9 @@ class HSLuvTests: XCTestCase {
             let toRgb = toXyz.toRGB
             let toHex = toRgb.toHex
 
-            XCTAssertEqual(lch.L, toLch.L, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(lch.C, toLch.C, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(lch.H, toLch.H, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(lch.l, toLch.l, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(lch.c, toLch.c, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(lch.h, toLch.h, accuracy: rgbRangeTolerance)
 
             XCTAssertEqual(luv.l, toLuv.l, accuracy: rgbRangeTolerance)
             XCTAssertEqual(luv.u, toLuv.u, accuracy: rgbRangeTolerance)
@@ -61,8 +61,8 @@ class HSLuvTests: XCTestCase {
         for h in stride(from: 0.0, through: 360, by: 5) {
             for s in stride(from: 0.0, through: 100, by: 5) {
                 for l in stride(from: 0.0, through: 100, by: 5) {
-                    let tRgb = hsluvToRgb(HSLuv(h, s, l))
-                    let rgb = [tRgb.r, tRgb.g, tRgb.B]
+                    let tRgb = hsluvToRgb(HSLuv(h: h, s: s, l: l))
+                    let rgb = [tRgb.r, tRgb.g, tRgb.b]
 
                     for channel in rgb {
                         XCTAssertGreaterThan(channel, -rgbRangeTolerance, "HSLuv: \([h, s, l]) -> RGB: \(rgb)")

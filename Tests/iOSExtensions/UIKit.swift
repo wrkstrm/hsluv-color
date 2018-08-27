@@ -49,7 +49,7 @@ class UIKitTests: XCTestCase {
         for h in stride(from: 0, through: 360, by: 5) {
             for s in stride(from: 0, through: 100, by: 5) {
                 for l in stride(from: 0, through: 100, by: 5) {
-                    let color = UIColor(hsluv: HSLuv(Double(h), Double(s), Double(l)), alpha: 1.0)
+                    let color = UIColor(hsluv: HSLuv(h: Double(h), s: Double(s), l: Double(l)), alpha: 1.0)
 
                     XCTAssertNotNil(color)
 

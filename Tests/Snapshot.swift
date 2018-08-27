@@ -57,8 +57,8 @@ class Snapshot {
                 "rgb": [rgb.r, rgb.g, rgb.b],
                 "xyz": [xyz.x, xyz.y, xyz.z],
                 "luv": [luv.l, luv.u, luv.v],
-                "lch": [lch.L, lch.C, lch.H],
-                "hsluv": [hsluv.H, hsluv.S, hsluv.L]
+                "lch": [lch.l, lch.c, lch.h],
+                "hsluv": [hsluv.h, hsluv.s, hsluv.l]
             ]
         }
 

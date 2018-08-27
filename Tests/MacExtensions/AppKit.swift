@@ -38,7 +38,7 @@ class AppKitTests: XCTestCase {
                     XCTAssertNotNil(color)
 
                     let t = color.getRGBA
-                    let rgb = [t.rgb.r, t.rgb.G, t.rgb.B]
+                    let rgb = [t.rgb.r, t.rgb.g, t.rgb.b]
 
                     for channel in rgb {
                         XCTAssertGreaterThan(channel, -rgbRangeTolerance, "HSLuv: \([h, s, l]) -> RGB: \(rgb)")

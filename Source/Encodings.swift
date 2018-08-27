@@ -93,7 +93,7 @@ public struct LCH {
     }
 }
 
-protocol HSLInitable {
+public protocol HSLInitable {
     init(h: Double, s: Double, l: Double)
 }
 
@@ -102,6 +102,12 @@ public struct HSLuv: HSLInitable {
     public var h: Double
     public var s: Double
     public var l: Double
+
+    public init(h: Double, s: Double, l: Double) {
+        self.h = h
+        self.s = s
+        self.l = l
+    }
 }
 
 /// HPLuv: Hue(pastel), Saturation, Lightness (HPLuv)
@@ -109,4 +115,10 @@ public struct HPLuv: HSLInitable {
     public var h: Double
     public var s: Double
     public var l: Double
+
+    public init(h: Double, s: Double, l: Double) {
+        self.h = h
+        self.s = s
+        self.l = l
+    }
 }
