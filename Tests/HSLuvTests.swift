@@ -41,17 +41,17 @@ class HSLuvTests: XCTestCase {
             XCTAssertEqual(lch.C, toLch.C, accuracy: rgbRangeTolerance)
             XCTAssertEqual(lch.H, toLch.H, accuracy: rgbRangeTolerance)
 
-            XCTAssertEqual(luv.L, toLuv.L, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(luv.U, toLuv.U, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(luv.V, toLuv.V, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(luv.l, toLuv.l, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(luv.u, toLuv.u, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(luv.v, toLuv.v, accuracy: rgbRangeTolerance)
 
-            XCTAssertEqual(xyz.X, toXyz.X, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(xyz.Y, toXyz.Y, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(xyz.Z, toXyz.Z, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(xyz.x, toXyz.x, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(xyz.y, toXyz.y, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(xyz.z, toXyz.z, accuracy: rgbRangeTolerance)
 
-            XCTAssertEqual(rgb.R, toRgb.R, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(rgb.G, toRgb.G, accuracy: rgbRangeTolerance)
-            XCTAssertEqual(rgb.B, toRgb.B, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(rgb.r, toRgb.r, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(rgb.g, toRgb.g, accuracy: rgbRangeTolerance)
+            XCTAssertEqual(rgb.b, toRgb.b, accuracy: rgbRangeTolerance)
 
             XCTAssertEqual(hex, toHex.string)
         }
@@ -62,7 +62,7 @@ class HSLuvTests: XCTestCase {
             for s in stride(from: 0.0, through: 100, by: 5) {
                 for l in stride(from: 0.0, through: 100, by: 5) {
                     let tRgb = hsluvToRgb(HSLuv(h, s, l))
-                    let rgb = [tRgb.R, tRgb.G, tRgb.B]
+                    let rgb = [tRgb.r, tRgb.g, tRgb.B]
 
                     for channel in rgb {
                         XCTAssertGreaterThan(channel, -rgbRangeTolerance, "HSLuv: \([h, s, l]) -> RGB: \(rgb)")

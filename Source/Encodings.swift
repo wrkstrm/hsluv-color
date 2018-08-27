@@ -35,86 +35,78 @@ public struct Hex {
 
 /// Red, Green, Blue (RGB)
 public struct RGB: TupleConvertible {
-    public var R: Double
-    public var G: Double
-    public var B: Double
+    public var r: Double
+    public var g: Double
+    public var b: Double
 
-    public init(_ R: Double, _ G: Double, _ B: Double) {
-        self.R = R
-        self.G = G
-        self.B = B
+    public init(r: Double, g: Double, b: Double) {
+        self.r = r
+        self.g = g
+        self.b = b
     }
 
     public var tuple: ColorTuple {
-        return (R, G, B)
+        return (r, g, b)
     }
 }
 
 /// Luminance, Blue-stimulation, Cone-response [CIE 1931] (XYZ)
 public struct XYZ: TupleConvertible {
-    public var X: Double
-    public var Y: Double
-    public var Z: Double
+    public var x: Double
+    public var y: Double
+    public var z: Double
 
-    public init(_ X: Double, _ Y: Double, _ Z: Double) {
-        self.X = X
-        self.Y = Y
-        self.Z = Z
+    public init(x: Double, y: Double, z: Double) {
+        self.x = x
+        self.y = y
+        self.z = z
     }
 
     public var tuple: ColorTuple {
-        return (X, Y, Z)
+        return (x, y, z)
     }
 }
 
 /// L*, u*, v* [CIE 1976] (LUV)
 public struct LUV {
-    public var L: Double
-    public var U: Double
-    public var V: Double
+    public var l: Double
+    public var u: Double
+    public var v: Double
 
-    public init(_ L: Double, _ U: Double, _ V: Double) {
-        self.L = L
-        self.U = U
-        self.V = V
+    public init(l: Double, u: Double, v: Double) {
+        self.l = l
+        self.u = u
+        self.v = v
     }
 }
 
 /// Lightness, Chroma, Hue (LCH)
 public struct LCH {
-    public var L: Double
-    public var C: Double
-    public var H: Double
+    public var l: Double
+    public var c: Double
+    public var h: Double
 
-    public init(_ L: Double, _ C: Double, _ H: Double) {
-        self.L = L
-        self.C = C
-        self.H = H
+    public init(l: Double, c: Double, h: Double) {
+        self.l = l
+        self.c = c
+        self.h = h
     }
+}
+
+protocol HSLInitable {
+    init(h: Double, s: Double, l: Double)
 }
 
 /// HSLuv: Hue(man), Saturation, Lightness (HSLuv)
-public struct HSLuv {
-    public var H: Double
-    public var S: Double
-    public var L: Double
-
-    public init(_ H: Double, _ S: Double, _ L: Double) {
-        self.H = H
-        self.S = S
-        self.L = L
-    }
+public struct HSLuv: HSLInitable {
+    public var h: Double
+    public var s: Double
+    public var l: Double
 }
 
 /// HPLuv: Hue(pastel), Saturation, Lightness (HPLuv)
-public struct HPLuv {
-    public var H: Double
-    public var S: Double
-    public var L: Double
-
-    public  init(_ H: Double, _ S: Double, _ L: Double) {
-        self.H = H
-        self.S = S
-        self.L = L
-    }
+public struct HPLuv: HSLInitable {
+    public var h: Double
+    public var s: Double
+    public var l: Double
 }

@@ -54,9 +54,9 @@ class Snapshot {
             let hsluv = lch.toHSLuv
 
             current[sample] = [
-                "rgb": [rgb.R, rgb.G, rgb.B],
-                "xyz": [xyz.X, xyz.Y, xyz.Z],
-                "luv": [luv.L, luv.U, luv.V],
+                "rgb": [rgb.r, rgb.g, rgb.b],
+                "xyz": [xyz.x, xyz.y, xyz.z],
+                "luv": [luv.l, luv.u, luv.v],
                 "lch": [lch.L, lch.C, lch.H],
                 "hsluv": [hsluv.H, hsluv.S, hsluv.L]
             ]

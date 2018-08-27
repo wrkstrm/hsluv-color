@@ -37,11 +37,11 @@ extension XYZ {
     }
 
     var toRGB: RGB {
-        let R = fromLinear(dotProduct(Constant.m.R, b: self))
-        let G = fromLinear(dotProduct(Constant.m.G, b: self))
+        let r = fromLinear(dotProduct(Constant.m.R, b: self))
+        let g = fromLinear(dotProduct(Constant.m.G, b: self))
         let B = fromLinear(dotProduct(Constant.m.B, b: self))
 
-        return RGB(R, G, B)
+        return RGB(r: r, g: g, b: B)
     }
 }
 
@@ -57,13 +57,13 @@ extension RGB {
     }
 
     var toXyz: XYZ {
-        let rgbl = RGB(toLinear(R), toLinear(G), toLinear(B))
+        let rgbl = RGB(r: toLinear(r), g: toLinear(g), b: toLinear(b))
 
-        let X = dotProduct(Constant.mInv.X, b: rgbl)
-        let Y = dotProduct(Constant.mInv.Y, b: rgbl)
-        let Z = dotProduct(Constant.mInv.Z, b: rgbl)
+        let x = dotProduct(Constant.mInv.X, b: rgbl)
+        let y = dotProduct(Constant.mInv.Y, b: rgbl)
+        let z = dotProduct(Constant.mInv.Z, b: rgbl)
 
-        return XYZ(X, Y, Z)
+        return XYZ(x: x, y: y, z: z)
     }
 }
 
@@ -84,20 +84,20 @@ extension XYZ {
     }
 
     var toLuv: LUV {
-        let varU = (4 * X) / (X + (15 * Y) + (3 * Z))
-        let varV = (9 * Y) / (X + (15 * Y) + (3 * Z))
+        let varU = (4 * x) / (x + (15 * y) + (3 * z))
+        let varV = (9 * y) / (x + (15 * y) + (3 * z))
 
-        let L = yToL(Y)
+        let l = yToL(y)
 
-        guard L != 0 else {
+        guard l != 0 else {
             // Black will create a divide-by-zero error
-            return LUV(0, 0, 0)
+            return LUV(l: 0, u: 0, v: 0)
         }
 
-        let U = 13 * L * (varU - Constant.refU)
-        let V = 13 * L * (varV - Constant.refV)
+        let u = 13 * l * (varU - Constant.refU)
+        let v = 13 * l * (varV - Constant.refV)
 
-        return LUV(L, U, V)
+        return LUV(l: l, u: u, v: v)
     }
 }
 
@@ -112,19 +112,19 @@ extension LUV {
     }
 
     var toXYZ: XYZ {
-        guard L != 0 else {
+        guard l != 0 else {
             // Black will create a divide-by-zero error
-            return XYZ(0, 0, 0)
+            return XYZ(x: 0, y: 0, z: 0)
         }
 
-        let varU = U / (13 * L) + Constant.refU
-        let varV = V / (13 * L) + Constant.refV
+        let varU = u / (13 * l) + Constant.refU
+        let varV = v / (13 * l) + Constant.refV
 
-        let Y = lToY(L)
-        let X = 0 - (9 * Y * varU) / ((varU - 4) * varV - varU * varV)
-        let Z = (9 * Y - (15 * varV * Y) - (varV * X)) / (3 * varV)
+        let y = lToY(l)
+        let x = 0 - (9 * y * varU) / ((varU - 4) * varV - varU * varV)
+        let z = (9 * y - (15 * varV * y) - (varV * x)) / (3 * varV)
 
-        return XYZ(X, Y, Z)
+        return XYZ(x: x, y: y, z: z)
     }
 }
 
@@ -133,32 +133,32 @@ extension LUV {
 public extension LUV {
 
     var toLch: LCH {
-        let C = sqrt(pow(U, 2) + pow(V, 2))
+        let c = sqrt(pow(u, 2) + pow(v, 2))
 
-        guard C >= 0.00000001 else {
+        guard c >= 0.00000001 else {
             // Greys: disambiguate hue
-            return LCH(L, C, 0)
+            return LCH(l: l, c: c, h: 0)
         }
 
-        let Hrad = atan2(V, U)
-        var H = Hrad * 360 / 2 / .pi
+        let Hrad = atan2(v, u)
+        var h = Hrad * 360 / 2 / .pi
 
-        if H < 0 {
-            H = 360 + H
+        if h < 0 {
+            h = 360 + h
         }
 
-        return LCH(L, C, H)
+        return LCH(l: l, c: c, h: h)
     }
 }
 
 public extension LCH {
 
     var toLUV: LUV {
-        let Hrad = H / 360 * 2 * .pi
-        let U = cos(Hrad) * C
-        let V = sin(Hrad) * C
+        let hRad = h / 360 * 2 * .pi
+        let u = cos(hRad) * c
+        let v = sin(hRad) * c
 
-        return LUV(L, U, V)
+        return LUV(l: l, u: u, v: v)
     }
 }
 
@@ -182,29 +182,29 @@ func maxChroma(lightness L: Double, hue H: Double) -> Double {
 public extension HSLuv {
 
     var toLch: LCH {
-        guard L <= 99.9999999 && L >= 0.00000001 else {
+        guard l <= 99.9999999 && l >= 0.00000001 else {
             // White and black: disambiguate chroma
-            return LCH(L, 0, H)
+            return LCH(l: l, c: 0, h: h)
         }
 
-        let max = maxChroma(lightness: L, hue: H)
-        let C = max / 100 * S
+        let max = maxChroma(lightness: l, hue: h)
+        let c = max / 100 * s
 
-        return LCH(L, C, H)
+        return LCH(l: l, c: c, h: h)
     }
 }
 
 public extension LCH {
     public var toHSLuv: HSLuv {
-        guard L <= 99.9999999 && L >= 0.00000001 else {
+        guard l <= 99.9999999 && l >= 0.00000001 else {
             // White and black: disambiguate saturation
-            return HSLuv(H, 0, L)
+            return HSLuv(h: h, s: 0, l: l)
         }
 
-        let max = maxChroma(lightness: L, hue: H)
-        let S = C / max * 100
+        let max = maxChroma(lightness: l, hue: h)
+        let s = c / max * 100
 
-        return HSLuv(H, S, L)
+        return HSLuv(h: h, s: s, l: l)
     }
 }
 
@@ -228,30 +228,30 @@ func maxChroma(lightness L: Double) -> Double {
 public extension HPLuv {
 
     public var toLCH: LCH {
-        guard L <= 99.9999999 && L >= 0.00000001 else {
+        guard l <= 99.9999999 && l >= 0.00000001 else {
             // White and black: disambiguate chroma
-            return LCH(L, 0, H)
+            return LCH(l: l, c: 0, h: h)
         }
 
-        let max = maxChroma(lightness: L)
-        let C = max / 100 * S
+        let max = maxChroma(lightness: l)
+        let c = max / 100 * s
 
-        return LCH(L, C, H)
+        return LCH(l: l, c: c, h: h)
     }
 }
 
 public extension LCH {
 
     public var toHPLuv: HPLuv {
-        guard L <= 99.9999999 && L >= 0.00000001 else {
+        guard l <= 99.9999999 && l >= 0.00000001 else {
             // White and black: disambiguate saturation
-            return HPLuv(H, 0, L)
+            return HPLuv(h: h, s: 0, l: l)
         }
 
-        let max = maxChroma(lightness: L)
-        let S = C / max * 100
+        let max = maxChroma(lightness: l)
+        let s = c / max * 100
 
-        return HPLuv(H, S, L)
+        return HPLuv(h: h, s: s, l: l)
     }
 }
 
@@ -278,9 +278,9 @@ public extension RGB {
     }
 
     public var toHex: Hex {
-        let R = getHexString(self.R)
-        let G = getHexString(self.G)
-        let B = getHexString(self.B)
+        let R = getHexString(self.r)
+        let G = getHexString(self.g)
+        let B = getHexString(self.b)
 
         return Hex("#\(R)\(G)\(B)")
     }
@@ -295,10 +295,9 @@ public extension Hex {
         var rgbValue: UInt32 = 0
         Scanner(string: string).scanHexInt32(&rgbValue)
 
-        return RGB(
-            Double((rgbValue & 0xFF0000) >> 16) / 255.0,
-            Double((rgbValue & 0x00FF00) >> 8)  / 255.0,
-            Double( rgbValue & 0x0000FF)        / 255.0
+        return RGB(r: Double((rgbValue & 0xFF0000) >> 16) / 255.0,
+                   g: Double((rgbValue & 0x00FF00) >> 8)  / 255.0,
+                   b: Double( rgbValue & 0x0000FF)        / 255.0
         )
     }
 }
