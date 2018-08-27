@@ -33,7 +33,7 @@ public extension UIColor {
     /// - parameter lightness: Double
     /// - parameter alpha: Double
     public convenience init(hue: Double, saturation: Double, lightness: Double, alpha: Double) {
-        let rgb = hsluvToRgb(HSLuv(hue, saturation, lightness))
+        let rgb = hsluvToRgb(HSLuv(h: hue, s: saturation, l: lightness))
         self.init(red: CGFloat(rgb.r),
                   green: CGFloat(rgb.g),
                   blue: CGFloat(rgb.b),
@@ -81,6 +81,6 @@ public extension UIColor {
 
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
-        return (RGB(Double(red), Double(green), Double(blue)), a: Double(alpha))
+        return (RGB(r: Double(red), g: Double(green), b: Double(blue)), a: Double(alpha))
     }
 }
