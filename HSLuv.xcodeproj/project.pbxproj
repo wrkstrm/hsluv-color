@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E6B61002133797E00A7ADF0 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */; };
-		6E6B610121337BA600A7ADF0 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */; };
+		6E12554F2133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */; };
+		6E1255502133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */; };
 		CB24CBB51B394AD800091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB24CBB61B394ADB00091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB328E3B1B32050C0061A872 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
@@ -64,7 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Encodings+Conversions.swift"; path = "../../../../Github/playgrounds/Encodings+Conversions.swift"; sourceTree = "<group>"; };
+		6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Encodings+Conversions.swift"; path = "Source/Encodings+Conversions.swift"; sourceTree = SOURCE_ROOT; };
 		CB328E391B3205050061A872 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snapshot.swift; path = Tests/Snapshot.swift; sourceTree = SOURCE_ROOT; };
 		CB339EEB1B31EE210067FDAF /* snapshot-rev4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "snapshot-rev4.json"; path = "Tests/Assets/snapshot-rev4.json"; sourceTree = SOURCE_ROOT; };
 		CB37B9051B2E7994009E63A5 /* HSLuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSLuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +227,7 @@
 			children = (
 				CBDA80371B2D2CBF0010C653 /* Math.swift */,
 				CBCAD5331B2F88AB00D0366A /* Encodings.swift */,
-				6E6B60FF2133797E00A7ADF0 /* Encodings+Conversions.swift */,
+				6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */,
 				CB8B96C41B2D59C7000F303C /* Supporting Files */,
 			);
 			name = Source;
@@ -487,7 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E6B610121337BA600A7ADF0 /* Encodings+Conversions.swift in Sources */,
+				6E1255502133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */,
 				CBCAD5351B2F88AD00D0366A /* Encodings.swift in Sources */,
 				CB37B91D1B2E79A8009E63A5 /* Math.swift in Sources */,
 				CB6AB2B31B308FA70075AF04 /* UIKit+extensions.swift in Sources */,
@@ -525,7 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E6B61002133797E00A7ADF0 /* Encodings+Conversions.swift in Sources */,
+				6E12554F2133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */,
 				CBCAD5341B2F88AB00D0366A /* Encodings.swift in Sources */,
 				CBDA80391B2D2CBF0010C653 /* Math.swift in Sources */,
 				CB6AB2B01B308EDC0075AF04 /* NSColor+extensions.swift in Sources */,
