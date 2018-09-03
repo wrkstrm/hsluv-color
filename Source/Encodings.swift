@@ -97,7 +97,20 @@ public protocol HSLInitable {
     init(h: Double, s: Double, l: Double)
 }
 
-/// HSLuv: Hue(man), Saturation, Lightness (HSLuv)
+/// HSLuv: Hue(man), Saturation, Lightness (HSL standard)
+public struct HSL: HSLInitable {
+    public var h: Double
+    public var s: Double
+    public var l: Double
+
+    public init(h: Double, s: Double, l: Double) {
+        self.h = h
+        self.s = s
+        self.l = l
+    }
+}
+
+/// HSLuv: Hue(man), Saturation, Lightness (HSL Lightness)
 public struct HSLuv: HSLInitable {
     public var h: Double
     public var s: Double
@@ -110,7 +123,7 @@ public struct HSLuv: HSLInitable {
     }
 }
 
-/// HPLuv: Hue(pastel), Saturation, Lightness (HPLuv)
+/// HPLuv: Hue(pastel), Saturation, Lightness (HSL Pastel)
 public struct HPLuv: HSLInitable {
     public var h: Double
     public var s: Double

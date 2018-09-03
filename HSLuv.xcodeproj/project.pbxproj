@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E12554F2133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */; };
-		6E1255502133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */; };
+		58021C59213CEAB100905E7B /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C55213CEAB100905E7B /* Math.swift */; };
+		58021C5A213CEAB100905E7B /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C55213CEAB100905E7B /* Math.swift */; };
+		58021C5B213CEAB100905E7B /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C56213CEAB100905E7B /* Encodings.swift */; };
+		58021C5C213CEAB100905E7B /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C56213CEAB100905E7B /* Encodings.swift */; };
+		58021C5D213CEAB100905E7B /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C57213CEAB100905E7B /* Encodings+Conversions.swift */; };
+		58021C5E213CEAB100905E7B /* Encodings+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58021C57213CEAB100905E7B /* Encodings+Conversions.swift */; };
 		CB24CBB51B394AD800091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB24CBB61B394ADB00091467 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB328E3B1B32050C0061A872 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328E391B3205050061A872 /* Snapshot.swift */; };
 		CB339EEC1B31EE2D0067FDAF /* snapshot-rev4.json in Resources */ = {isa = PBXBuildFile; fileRef = CB339EEB1B31EE210067FDAF /* snapshot-rev4.json */; };
-		CB37B91D1B2E79A8009E63A5 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80371B2D2CBF0010C653 /* Math.swift */; };
 		CB6AB2841B3083890075AF04 /* HSLuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDA801C1B2D2C740010C653 /* HSLuv.framework */; };
 		CB6AB28B1B3084020075AF04 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783AD11B3078D5001F8BCB /* AppKit.swift */; };
 		CB6AB2A61B308A6F0075AF04 /* HSLuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB37B9051B2E7994009E63A5 /* HSLuv.framework */; };
 		CB6AB2AD1B308B520075AF04 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783AD01B3078CF001F8BCB /* UIKit.swift */; };
-		CB6AB2B01B308EDC0075AF04 /* NSColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783ACD1B30775F001F8BCB /* NSColor+extensions.swift */; };
-		CB6AB2B31B308FA70075AF04 /* UIKit+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783ACE1B307768001F8BCB /* UIKit+extensions.swift */; };
+		CB6AB2B01B308EDC0075AF04 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783ACD1B30775F001F8BCB /* NSColor+Extensions.swift */; };
+		CB6AB2B31B308FA70075AF04 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB783ACE1B307768001F8BCB /* UIKit+Extensions.swift */; };
 		CB98BFB91B307B070027506A /* HSLuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDA801C1B2D2C740010C653 /* HSLuv.framework */; };
 		CB98BFBF1B307B1D0027506A /* HSLuvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB604FB91B30734C009A99D1 /* HSLuvTests.swift */; };
-		CBCAD5341B2F88AB00D0366A /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* Encodings.swift */; };
-		CBCAD5351B2F88AD00D0366A /* Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAD5331B2F88AB00D0366A /* Encodings.swift */; };
-		CBDA80391B2D2CBF0010C653 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA80371B2D2CBF0010C653 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,24 +64,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Encodings+Conversions.swift"; path = "Source/Encodings+Conversions.swift"; sourceTree = SOURCE_ROOT; };
+		58021C55213CEAB100905E7B /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		58021C56213CEAB100905E7B /* Encodings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodings.swift; sourceTree = "<group>"; };
+		58021C57213CEAB100905E7B /* Encodings+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodings+Conversions.swift"; sourceTree = "<group>"; };
+		58021C58213CEAB100905E7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB328E391B3205050061A872 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snapshot.swift; path = Tests/Snapshot.swift; sourceTree = SOURCE_ROOT; };
 		CB339EEB1B31EE210067FDAF /* snapshot-rev4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "snapshot-rev4.json"; path = "Tests/Assets/snapshot-rev4.json"; sourceTree = SOURCE_ROOT; };
 		CB37B9051B2E7994009E63A5 /* HSLuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSLuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB604FB91B30734C009A99D1 /* HSLuvTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSLuvTests.swift; path = Tests/HSLuvTests.swift; sourceTree = SOURCE_ROOT; };
 		CB6AB27F1B3083890075AF04 /* HSLuvMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSLuvMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6AB2A11B308A6F0075AF04 /* HSLuviOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSLuviOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB783ACD1B30775F001F8BCB /* NSColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSColor+extensions.swift"; path = "Extensions/AppKit/NSColor+extensions.swift"; sourceTree = "<group>"; };
-		CB783ACE1B307768001F8BCB /* UIKit+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIKit+extensions.swift"; path = "Extensions/UIKit/UIKit+extensions.swift"; sourceTree = "<group>"; };
-		CB783ACF1B30777E001F8BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		CB783ACD1B30775F001F8BCB /* NSColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSColor+Extensions.swift"; path = "Extensions/AppKit/NSColor+Extensions.swift"; sourceTree = "<group>"; };
+		CB783ACE1B307768001F8BCB /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIKit+Extensions.swift"; path = "Extensions/UIKit/UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		CB783AD01B3078CF001F8BCB /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIKit.swift; path = Tests/iOSExtensions/UIKit.swift; sourceTree = SOURCE_ROOT; };
 		CB783AD11B3078D5001F8BCB /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppKit.swift; path = Tests/MacExtensions/AppKit.swift; sourceTree = SOURCE_ROOT; };
 		CB98BFB41B307B070027506A /* HSLuvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSLuvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBCAD5331B2F88AB00D0366A /* Encodings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encodings.swift; path = Source/Encodings.swift; sourceTree = SOURCE_ROOT; };
 		CBCAD5371B2FBEBD00D0366A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBCAD53B1B2FBF0600D0366A /* HSLuvColor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = HSLuvColor.podspec; sourceTree = "<group>"; };
 		CBDA801C1B2D2C740010C653 /* HSLuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSLuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBDA80371B2D2CBF0010C653 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = Source/Math.swift; sourceTree = SOURCE_ROOT; };
 		CBDD2B131B461C3000E4548F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +127,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58021C54213CEAB100905E7B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				58021C55213CEAB100905E7B /* Math.swift */,
+				58021C56213CEAB100905E7B /* Encodings.swift */,
+				58021C57213CEAB100905E7B /* Encodings+Conversions.swift */,
+				58021C58213CEAB100905E7B /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		CB37B9121B2E7994009E63A5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +171,7 @@
 		CB783ACB1B30774B001F8BCB /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
-				CB783ACD1B30775F001F8BCB /* NSColor+extensions.swift */,
+				CB783ACD1B30775F001F8BCB /* NSColor+Extensions.swift */,
 			);
 			name = AppKit;
 			sourceTree = "<group>";
@@ -168,17 +179,9 @@
 		CB783ACC1B307751001F8BCB /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				CB783ACE1B307768001F8BCB /* UIKit+extensions.swift */,
+				CB783ACE1B307768001F8BCB /* UIKit+Extensions.swift */,
 			);
 			name = UIKit;
-			sourceTree = "<group>";
-		};
-		CB8B96C41B2D59C7000F303C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CB783ACF1B30777E001F8BCB /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CBCAD5361B2FBEAF00D0366A /* Podspec Metadata */ = {
@@ -203,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				CBCAD5361B2FBEAF00D0366A /* Podspec Metadata */,
-				CBDA801E1B2D2C740010C653 /* Source */,
+				58021C54213CEAB100905E7B /* Source */,
 				CB783ACA1B30773C001F8BCB /* Extensions */,
 				CB37B9121B2E7994009E63A5 /* Tests */,
 				CBDA801D1B2D2C740010C653 /* Products */,
@@ -220,18 +223,6 @@
 				CB6AB2A11B308A6F0075AF04 /* HSLuviOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CBDA801E1B2D2C740010C653 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				CBDA80371B2D2CBF0010C653 /* Math.swift */,
-				CBCAD5331B2F88AB00D0366A /* Encodings.swift */,
-				6E12554E2133893E00A2D9D6 /* Encodings+Conversions.swift */,
-				CB8B96C41B2D59C7000F303C /* Supporting Files */,
-			);
-			name = Source;
-			path = HSLuvSwift;
 			sourceTree = "<group>";
 		};
 		CBDA802A1B2D2C740010C653 /* AppKit */ = {
@@ -487,10 +478,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E1255502133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */,
-				CBCAD5351B2F88AD00D0366A /* Encodings.swift in Sources */,
-				CB37B91D1B2E79A8009E63A5 /* Math.swift in Sources */,
-				CB6AB2B31B308FA70075AF04 /* UIKit+extensions.swift in Sources */,
+				58021C5C213CEAB100905E7B /* Encodings.swift in Sources */,
+				CB6AB2B31B308FA70075AF04 /* UIKit+Extensions.swift in Sources */,
+				58021C5A213CEAB100905E7B /* Math.swift in Sources */,
+				58021C5E213CEAB100905E7B /* Encodings+Conversions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,10 +516,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E12554F2133893E00A2D9D6 /* Encodings+Conversions.swift in Sources */,
-				CBCAD5341B2F88AB00D0366A /* Encodings.swift in Sources */,
-				CBDA80391B2D2CBF0010C653 /* Math.swift in Sources */,
-				CB6AB2B01B308EDC0075AF04 /* NSColor+extensions.swift in Sources */,
+				58021C5B213CEAB100905E7B /* Encodings.swift in Sources */,
+				CB6AB2B01B308EDC0075AF04 /* NSColor+Extensions.swift in Sources */,
+				58021C59213CEAB100905E7B /* Math.swift in Sources */,
+				58021C5D213CEAB100905E7B /* Encodings+Conversions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +551,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -591,7 +582,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BM6B69ZQSR;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

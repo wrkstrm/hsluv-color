@@ -22,9 +22,9 @@
 // SOFTWARE.
 //
 
-import AppKit
+import UIKit
 
-public extension NSColor {
+public extension UIColor {
     /// Initializes and returns a color object using the specified opacity and
     /// HSLuv color space component values.
     ///
@@ -32,12 +32,12 @@ public extension NSColor {
     /// - parameter saturation: Double
     /// - parameter lightness: Double
     /// - parameter alpha: Double
-    public convenience init(hue: Double, saturation: Double, lightness: Double, alpha: Double) {
+    public convenience init(hue: Double, saturation: Double, lightness: Double, alpha: CGFloat) {
         let rgb = hsluvToRgb(HSLuv(h: hue, s: saturation, l: lightness))
         self.init(red: CGFloat(rgb.r),
                   green: CGFloat(rgb.g),
                   blue: CGFloat(rgb.b),
-                  alpha: CGFloat(alpha))
+                  alpha: alpha)
     }
 
     /// Initializes and returns a color object using the specified opacity and
@@ -47,12 +47,12 @@ public extension NSColor {
     /// - parameter saturation: Double
     /// - parameter lightness: Double
     /// - parameter alpha: Double
-    public convenience init(hsluv: HSLuv, alpha: Double) {
+    public convenience init(hsluv: HSLuv, alpha: CGFloat) {
         let rgb = hsluvToRgb(hsluv)
         self.init(red: CGFloat(rgb.r),
                   green: CGFloat(rgb.g),
                   blue: CGFloat(rgb.b),
-                  alpha: CGFloat(alpha))
+                  alpha: alpha)
     }
 
     /// Initializes and returns a color object using the specified opacity and
@@ -62,12 +62,26 @@ public extension NSColor {
     /// - parameter saturation: Double
     /// - parameter lightness: Double
     /// - parameter alpha: Double
-    public convenience init(hpluv: HPLuv, alpha: Double) {
+    public convenience init(hpluv: HPLuv, alpha: CGFloat) {
         let rgb = hpluvToRgb(hpluv)
         self.init(red: CGFloat(rgb.r),
                   green: CGFloat(rgb.g),
                   blue: CGFloat(rgb.b),
-                  alpha: CGFloat(alpha))
+                  alpha: alpha)
+    }
+
+    /// Initializes and returns a color object using the specified opacity and
+    /// HPL in regular iOS color space component values.
+    ///
+    /// - parameter hue: Double
+    /// - parameter saturation: Double
+    /// - parameter lightness: Double
+    /// - parameter alpha: Double
+    public convenience init(hsl: HSL, alpha: CGFloat) {
+        self.init(hue: CGFloat(hsl.h),
+                  saturation: CGFloat(hsl.s),
+                  brightness: CGFloat(hsl.l),
+                  alpha: alpha)
     }
 
     /// Convenience function to wrap the behavior of getRed(red:green:blue:alpha:)
@@ -82,5 +96,18 @@ public extension NSColor {
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
         return (RGB(r: Double(red), g: Double(green), b: Double(blue)), a: Double(alpha))
+    }
+
+    /// Convenience function to wrap the behavior of getHue(hue:saturation:lightness:alpha:)
+    ///
+    /// - returns: (rgb: RGB, alpha: CGFloat)
+    public var getHSLA: (rgb: HSL, a: CGFloat) {
+        var hue: CGFloat = 0.0
+        var saturation: CGFloat = 0.0
+        var lightness: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+
+        self.getHue(&hue, saturation: &saturation, brightness: &lightness, alpha: &alpha)
+        return (HSL(h: Double(hue), s: Double(saturation), l: Double(lightness)), a: alpha)
     }
 }
